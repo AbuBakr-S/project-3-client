@@ -1,8 +1,7 @@
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
 import { getToken } from './auth'
-
-const baseUrl = '/api'
+import { baseUrl } from '../config'
 
 function headers() {
   return {
@@ -24,6 +23,7 @@ export function getAllItems() {
 }
 
 export function getAllRecipes() {
+  console.log(baseUrl)
   return axios.get(`${baseUrl}/recipes`)
 }
 

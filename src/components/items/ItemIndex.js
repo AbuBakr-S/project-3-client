@@ -7,7 +7,7 @@ import ItemCard from './ItemCard'
 
 function ItemIndex() {
   const [items, setItems] = React.useState([])
-  const [searchValue, setSearchValue] = React.useState('')
+  // const [searchValue, setSearchValue] = React.useState('')
   const [selectedItems, setSelectedItems] = React.useState(null)
 
   React.useEffect(() => {
@@ -36,7 +36,7 @@ function ItemIndex() {
   }
 
   const searchTyping = (e) => {
-    setSearchValue(e.target.value)
+    // setSearchValue(e.target.value)
     filterItems(e.target.value)
   }
 

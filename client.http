@@ -1,5 +1,5 @@
 
-GET rhttps://nominatim.openstreetmap.org/search/70176%20Stuttgart%20Johannesstraße%20100?format=json&addressdetails=1&limit=1&polygon_svg=1
+GET https://nominatim.openstreetmap.org/search/70176%20Stuttgart%20Johannesstraße%20100?format=json&addressdetails=1&limit=1&polygon_svg=1
 
 //format=json
 //addressdetails=1
