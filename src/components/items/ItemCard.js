@@ -27,6 +27,7 @@ function ItemCard({ name, category, icon, id }) {
       console.log('after mount', isAddClicked)
     } catch (err) {
       // ! Set to BE api errors
+      console.log(err)
       console.log('BE Errors: ', err.response.data.message)
       setFormErrors(err.response.data.errors)
     }
