@@ -25,7 +25,7 @@ function InventoryItems() {
     getData()
   }, [])
 
-  console.log(inventoryItems)
+  // console.log(inventoryItems)
 
   React.useEffect(() => {
     const filterInventoryItems = () => {

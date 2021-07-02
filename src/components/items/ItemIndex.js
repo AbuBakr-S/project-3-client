@@ -24,8 +24,8 @@ function ItemIndex() {
     getData()
   }, [])
 
-  console.log(items)
-  console.log(selectedItems)
+  // console.log(items)
+  // console.log(selectedItems)
 
   const filterItems = (search) => {
     setSelectedItems(items.filter(item => {

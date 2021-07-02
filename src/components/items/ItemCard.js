@@ -11,7 +11,7 @@ function ItemCard({ name, category, icon, id }) {
   })
 
   const [isAddClicked, setIsAddClicked] = React.useState(false)
-  console.log('at mount', isAddClicked)
+  // console.log('at mount', isAddClicked)
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -31,7 +31,7 @@ function ItemCard({ name, category, icon, id }) {
       setFormErrors(err.response.data.errors)
     }
   }
-  console.log(isAddClicked ? 'zoom-in' : '')
+  // console.log(isAddClicked ? 'zoom-in' : '')
 
   return (
     <div 
@@ -51,7 +51,7 @@ function ItemCard({ name, category, icon, id }) {
           <input 
             className ={`input mb-2 ${formErrors.quantity ? 'is-danger' : ''}`}
             type="number" 
-            id="quantity"
+            // id="quantity"
             placeholder="e.g. 6"
             name="quantity"
             onChange={handleChange}
@@ -63,7 +63,7 @@ function ItemCard({ name, category, icon, id }) {
           <label className="label">Expiry Date:</label>
           <input 
             className={`input mb-2 ${formErrors.expiryDate ? 'is-danger' : ''}`}
-            id="expiryDate"
+            // id="expiryDate"
             type="date"
             name="expiryDate"
             min={`${new Date().getFullYear()}-${('0' + (new Date().getMonth() + 1)).slice(-2)}-${('0' + (new Date().getDate())).slice(-2)}`}

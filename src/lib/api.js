@@ -13,8 +13,8 @@ function getUserId() {
   const token = getToken()
   const decoded = jwt.verify(token, 'abubakarjonasdimitar')
   const userId = decoded.userId
-  console.log(token)
-  console.log(userId)
+  // console.log(token)
+  // console.log(userId)
   return userId
 }
 
@@ -23,7 +23,7 @@ export function getAllItems() {
 }
 
 export function getAllRecipes() {
-  console.log(baseUrl)
+  // console.log(baseUrl)
   return axios.get(`${baseUrl}/recipes`)
 }
 
