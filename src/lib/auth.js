@@ -6,6 +6,7 @@ export function setToken(token) {
 export function getToken() {
   return window.localStorage.getItem('token')
 }
+
 export function removeToken() {
   window.localStorage.removeItem('token')
 }
@@ -16,6 +17,12 @@ function getPayload() {
   const parts = token.split('.')
   if (parts.length < 3) return false
   return JSON.parse(atob(parts[1]))
+}
+
+export function getUserId() {
+  const payload = getPayload()
+  if (!isAuthenticated()) return false
+  return payload.sub
 }
 
 export function isAuthenticated() {
