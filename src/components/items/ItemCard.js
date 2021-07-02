@@ -5,7 +5,8 @@ import React from 'react'
 
 function ItemCard({ name, category, icon, id }) {
   // const history = useHistory()
-  const { formdata, formErrors, handleChange, setFormErrors } = useForm({
+  // temp removing setFormErrors
+  const { formdata, formErrors, handleChange } = useForm({
     quantity: '',
     expiryDate: '',
   })
@@ -29,7 +30,7 @@ function ItemCard({ name, category, icon, id }) {
       // ! Set to BE api errors
       console.log(err)
       // console.log('BE Errors: ', err.response.data.message)
-      setFormErrors(err.response.data.errors)
+      // setFormErrors(err.response.data.errors)
     }
   }
   // console.log(isAddClicked ? 'zoom-in' : '')
