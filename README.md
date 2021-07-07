@@ -10,7 +10,7 @@ The general idea is to encourage thoughtfulness around food and waste by logging
 ### Architecture
 This was our first project where we tasked to build a full stack application using  the MERN stack. 
 
-![Architecture]()
+![Architecture](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/mern-stack-architecture.jpeg)
 
 ### Web Technologies / Frameworks
 * MongoDB
@@ -47,7 +47,7 @@ Once we had the idea down, we started to think about how to break this up into M
 Once we noted down the fields we wanted in our database, we moved onto sketching out the visualisations of the user journey. This helped everyone to check in and make sure we all understood what we were working towards. 
 
 ### Whiteboard
-![Whiteboard]()
+![Whiteboard](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/whiteboard.png)
 
 ### Models
 * Item
@@ -59,13 +59,13 @@ Once we noted down the fields we wanted in our database, we moved onto sketching
 I initially looked into consuming an external api for grocery items with the advantage of gaining access to thousands of item and rich data, however I wasn’t happy with the images they provided. I then considered making users upload their own images which would be a bad UX with unmanaged images. In the end I found some great icon packs on Flaticon and decided to host them on Cloudinary and use them as seeded data. 
 
 */api/items*
-![Item Endpoint]()
+![Item Endpoint](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/item-endpoint.png)
 
 
 #### Inventory Item Model
 Here’s an example of the Inventory Item model. This references the Item model’s data to initialise the item’s default attributes while extending it with additional fields containing user input data for a customised item. The User model is also referenced to link this data to the user’s record. 
 
-![Inventory Item Model]()
+![Inventory Item Model](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/inventory-item-model.png)
 
 ### Controllers
  
@@ -73,20 +73,20 @@ Here’s an example of the Inventory Item model. This references the Item model�
 I worked on the Edit controller and as already mentioned, each Inventory Item belongs to a user and therefore only the owner should be able to edit their item. I accessed the current user ID from the payload on the request and compared it with the owner’s ID.
 
 *back-end*
-![Inventory Item Controller Back End]()
+![Inventory Item Controller Back End](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/update-inventory-item.png)
 
 *api put request*
-![Put Request]()
+![Put Request](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/put-request.png)
 
 On the front end I conditionally rendered the *Save Changes* button if the *Edit* button is clicked.  I listened for the `onChange()` event to save the new quantity in state. Once the save button is clicked, I called the `put` request, passing in the Inventory Item ID and the new quantity value. Finally, the page is refreshed to reflect the update.
 
 *front-end*
-![Handle Edit]()
+![Handle Edit](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/handle-edit.png)
 
-![Conditional Rendering]()
+![Conditional Rendering](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/edit-quantity.png)
 
 *edit Inventory Item*
-![Edit UI]()
+![Edit UI](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/edit-card.png)
 
 
 ### Recipe Match Logic
@@ -99,19 +99,19 @@ Comparing recipes by their ingredients with the user inventory items.
 	4. If no match is found, break the loop, otherwise set Boolean to true and return
 
 *recipe finder*
-![Recipe Finder UI]()
+![Recipe Finder UI](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/no-recipes)
 
 *recipes index*
-![Recipe Index UI]()
+![Recipe Index UI](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/recipes.png)
 
 ### Shared Item
 We wanted to encourage food waste prevention and cooking as opposed to over consumption and though it would be a great to integrate food sharing on a map using the Mapbox API. From the Item Inventory, a user can also share an item. All shared items for a user will appear on a scrollable card set on a pin on the map.
 
 *sharingMap*
-![Sharing Map Logic]()
+![Sharing Map Logic](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/sharing-map-code.png)
 
 *find shared food*
-![Map]()
+![Map](https://github.com/AbuBakr-S/project-3-client/blob/main/src/assest/map.png)
 
 
 ## Unsolved Problems / Major Hurdles
