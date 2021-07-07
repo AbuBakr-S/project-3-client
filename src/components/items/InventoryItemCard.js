@@ -79,21 +79,21 @@ function InventoryItemCard({ name, category, icon, id, quantity, expiryDate, sha
         :
         <>
           <div className="card-content">
-            <p>Name: {name}</p>
-            <p>Category: {category}</p>
-            <label htmlFor="quantity">Quantity: </label>
-            <input type="number" id="quantity" 
+            <p className="mb-2 is-capitalized has-text-weight-bold">Name: {name}</p>
+            <p className="mb-2 is-capitalized has-text-weight-bold">Category: {category}</p>
+            <label className="is-capitalized has-text-weight-bold" htmlFor="quantity">Quantity: </label>
+            <input className="mb-2" type="number" id="quantity" 
               placeholder={quantity} 
               onChange={event => setNewQuantity({
                 'quantity': `${event.target.value}`,
               })}
             />
-            <p>Expiry Date: {new Date(expiryDate).toLocaleDateString()}</p>
+            <p className="mb-2 is-capitalized has-text-weight-bold">Expiry Date: <span className="has-text-weight-normal">{new Date(expiryDate).toLocaleDateString()}</span></p>
           </div> 
 
           <button 
             type="submit"
-            className="button is-warning"
+            className="button is-warning mb-3"
             name='quantity'
             onClick={handleSave}
           >
@@ -122,7 +122,7 @@ function InventoryItemCard({ name, category, icon, id, quantity, expiryDate, sha
 
       <button 
         type="submit"
-        className="button is-danger"
+        className="button is-danger mb-3"
         name='quantity'
         onClick={handleDelete}
       >
