@@ -16,6 +16,7 @@ This was our first project where we tasked to build a full stack application usi
 * MongoDB
 * Express
 * React
+* JavaScript
 * Node
 * Model, View, Controller (MVC)
 * Bulma
