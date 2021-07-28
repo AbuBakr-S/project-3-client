@@ -58,7 +58,7 @@ Once we had the idea down, we started to think about how to break this up into M
 *Whiteboarding*
 <img src="src/assest/whiteboard.png" alt="Whiteboard">
 
-### Functionality and Walkthrough
+### Functionality
 * Guests should only be able to view all recipes
 * Register and login
 * Search and browse items
